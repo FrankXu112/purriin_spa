@@ -1,0 +1,120 @@
+<!-- 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">      
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand page-scroll" href="#page-top">Purriin Spa</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="hidden">
+          <a href="#page-top"></a>
+        </li>
+        <li>
+          <%= link_to 'About', spas_path %>
+        </li>
+        <li>
+          <%= link_to 'FAQs', '/spas/faq' %>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Spa menu<span class="caret"></span></a>
+            <ul class="dropdown-menu" id="menu" role="menu">
+           		<li >Colon Hydrotherapy</li>
+       		    <li >Floatation</li>
+            </ul>
+        </li> 
+      </ul>
+    </div>
+  </div>
+</nav> -->
+<!-- <div id="wrapper">
+  <div class="overlay"></div>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+    <ul class="nav sidebar-nav">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+      </li>
+      <li>
+        <a href="#">Blog</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="page-content-wrapper">
+    <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+      <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+    </button>
+  </div>
+</div> -->
+<div id="wrapper">
+  <div class="overlay"></div>
+  
+  <!-- Sidebar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+    <ul class="nav sidebar-nav">
+      <li class="sidebar-brand"> <%= link_to 'Purriin Spa', spas_path %> </li>
+      <li> <a href="/spas"><i class="fa fa-fw fa-home"></i> Home</a> </li>
+      <li> <a href="/spas/faq"><i class="fa fa-fw fa-folder"></i> FAQs</a> </li>
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Spa Menu <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li id="drop-text1"><%= link_to 'Colon Hydrotherapy', spas_path %></li>
+          <li id="drop-text2"><%= link_to 'Floatation', spas_path %></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- /#sidebar-wrapper -->
+  <div id="page-content-wrapper">
+    <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
+      <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+      <span class="hamb-bottom"></span>
+    </button>
+  </div> 
+</div>
+
+<script> 
+  $(document).ready(function () {
+    var trigger = $('.hamburger'),
+        overlay = $('.overlay'),
+       isClosed = false;
+   
+      trigger.click(function () {
+        hamburger_cross();     
+      });
+   
+      function hamburger_cross() {
+   
+        if (isClosed == true) {         
+          overlay.hide();
+          trigger.removeClass('is-open');
+          trigger.addClass('is-closed');
+          isClosed = false;
+        } else {  
+          overlay.show();
+          trigger.removeClass('is-closed');
+          trigger.addClass('is-open');
+          isClosed = true;
+        }
+    }
+     
+    $('[data-toggle="offcanvas"]').click(function () {
+          $('#wrapper').toggleClass('toggled');
+    }); 
+  });
+</script>
+
+
+

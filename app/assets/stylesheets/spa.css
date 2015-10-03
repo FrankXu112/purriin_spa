@@ -1,0 +1,436 @@
+body {
+	background: url(../assets/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: purple;
+}
+
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body, html {
+  height: 100%;
+}
+
+.nav .open > a { background-color: transparent; }
+
+.nav .open > a:hover { background-color: #52418a; }
+
+.nav .open > a:focus { background-color: transparent; }
+
+/*-------------------------------*/
+/*           Wrappers            */
+/*-------------------------------*/
+
+#wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled { padding-left: 220px; }
+
+#wrapper.toggled #sidebar-wrapper { width: 220px; }
+
+#wrapper.toggled #page-content-wrapper {
+  margin-right: -220px;
+  position: absolute;
+}
+
+#sidebar-wrapper {
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  background-color: black;
+  height: 100%;
+  left: 220px;
+  margin-left: -220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 0;
+  z-index: 1000;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+#sidebar-wrapper::-webkit-scrollbar {
+ display: none;
+}
+
+#page-content-wrapper {
+  padding-top: 70px;
+  width: 100%;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
+
+.sidebar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 220px;
+}
+
+.sidebar-nav li {
+  display: inline-block;
+  line-height: 20px;
+  position: relative;
+  width: 100%;
+}
+
+
+.sidebar-nav li:before {
+  -moz-transition: width 0.2s ease-in;
+  -ms-transition: width 0.2s ease-in;
+  -webkit-transition: width 0.2s ease-in;
+  background-color: purple;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 3px;
+  z-index: -1;
+}
+
+
+
+.sidebar-nav li:nth-child(1):before { background-color: #52418a; }
+
+.sidebar-nav li:nth-child(2):before { background-color: #5c499c; }
+
+.sidebar-nav li:nth-child(3):before { background-color: #6651ad; }
+
+.sidebar-nav li:nth-child(4):before { background-color: #7562b5; }
+
+.sidebar-nav li:nth-child(5):before { background-color: #8473be; }
+
+.sidebar-nav li:nth-child(6):before { background-color: #9485c6; }
+
+.sidebar-nav li:nth-child(8):before { background-color: #a396ce; }
+
+.sidebar-nav li:nth-child(9):before { background-color: #b2a7d6; }
+
+.sidebar-nav li:hover:before {
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 100%;
+}
+
+.sidebar-nav li a {
+  color: #533f34;
+  display: block;
+  padding: 10px 15px 10px 30px;
+  text-decoration: none;
+}
+
+.sidebar-nav li.open:hover before {
+  -webkit-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  width: 100%;
+}
+
+.sidebar-nav .dropdown-menu {
+  background-color: black;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+}
+
+li #drop-text1{
+	color: #533f34;
+}
+
+li #drop-text2{
+	color: #533f34;
+}
+
+.sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus, .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus {
+  background-color: transparent;
+  color: #533f34;
+  text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+  font-size: 25px;
+  height: 65px;
+  line-height: 44px;
+  font-family: 'Sorts Mill Goudy', serif;
+}
+
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+.hamburger {
+  background: transparent;
+  border: none;
+  display: block;
+  height: 32px;
+  margin-left: 15px;
+  position: fixed;
+  top: 20px;
+  width: 32px;
+  z-index: 999;
+}
+
+.hamburger:hover { outline: none; }
+
+.hamburger:focus { outline: none; }
+
+.hamburger:active { outline: none; }
+
+.hamburger.is-closed:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  color: #ffffff;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.hamburger.is-closed:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+
+.hamburger.is-closed:hover .hamb-top {
+  -webkit-transition: all 0.35s ease-in-out;
+  top: 0;
+}
+
+.hamburger.is-closed:hover .hamb-bottom {
+  -webkit-transition: all 0.35s ease-in-out;
+  bottom: 0;
+}
+
+.hamburger.is-closed .hamb-top {
+  -webkit-transition: all 0.35s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 5px;
+}
+
+.hamburger.is-closed .hamb-middle {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: -2px;
+  top: 50%;
+}
+
+.hamburger.is-closed .hamb-bottom {
+  -webkit-transition: all 0.35s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.7);
+  bottom: 5px;
+}
+
+.hamburger.is-closed .hamb-top, .hamburger.is-closed .hamb-middle, .hamburger.is-closed .hamb-bottom, .hamburger.is-open .hamb-top, .hamburger.is-open .hamb-middle, .hamburger.is-open .hamb-bottom {
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.hamburger.is-open .hamb-top {
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+  background-color: #ffffff;
+  margin-top: -2px;
+  top: 50%;
+}
+
+.hamburger.is-open .hamb-middle {
+  background-color: #ffffff;
+  display: none;
+}
+
+.hamburger.is-open .hamb-bottom {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+  background-color: #ffffff;
+  margin-top: -2px;
+  top: 50%;
+}
+
+.hamburger.is-open:before {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  color: #ffffff;
+  content: '';
+  display: block;
+  font-size: 14px;
+  line-height: 32px;
+  opacity: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.hamburger.is-open:hover before {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all 0.35s ease-in-out;
+  display: block;
+  opacity: 1;
+}
+
+/*-------------------------------*/
+/*          Dark Overlay         */
+/*-------------------------------*/
+
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/*.navbar{
+	font-size: 20px;
+}
+
+
+#menu{
+	font-size: 15px;
+	padding-right: 40px;
+	background-color: black;
+	color: #BCC6CC;
+	text-align: right;
+}*/
+
+/*.homepage{
+	border: 1px solid white;
+	background: url(../assets/background2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}*/
+
+#logo{
+	margin-left: 25px;
+	width: 350px;
+	height: 100px;
+	position: relative;
+}
+
+.iilogo{
+	background-image: url(../assets/iilogo-white.jpg);
+	border-radius: 100%;
+	border: 3px solid #533f34;
+	margin-left: 40px;
+	margin-bottom: 40px; 
+	width: 160px;
+	height: 160px;
+	background-size: 90px ;
+	background-position: center;	
+  background-repeat: no-repeat;
+	position: relative;
+}
+
+.divider-1{
+	height:0; 
+  border:0; 
+  border-top:3px solid #533f34;
+  margin-bottom: 40px;
+}
+
+.divider{
+	height:0; 
+  border:0; 
+  border-top:3px solid #533f34; 
+}
+
+#picture{
+	position: relative;
+	border: 1px solid black;
+	width: 1050px;
+	height: 500px;
+	margin-left: 40px;
+	margin-bottom: 50px;
+}
+
+.heading{
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size: 36px;
+	color: #533f34;
+	position: relative;
+}
+
+.sub-heading{
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size: 28px;
+	color: #533f34;
+}
+
+.maintext{
+	/*font-family: 'Raleway', sans-serif;*/
+	font-size: 20px;
+	text-align: left;
+	color: #BCC6CC;
+}
+
+.contact-label{
+	text-align: justify;
+	font-size: 22px;
+	color: #533f34;
+}
+
+.contact-text{
+	text-align: justify;
+	font-size: 19px;
+	color: #BCC6CC;
+}
+
+
+.list-unstyled{
+	margin-left: 50px;
+}
+
+.btn-lg{
+	font-family: arial bold;
+	margin-top: 30px;
+	margin-right: 100px;
+	color: #BCC6CC;
+	background-color: #533f34;
+	position: relative;
+}
+
+footer{
+	font-size: 18px;
+}
+
+.copyright{
+	color: #BCC6CC;
+}
+
+
