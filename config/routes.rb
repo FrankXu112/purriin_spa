@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   resources :spas, only: [:index] 
 
   get '/spas/faq', to: 'spas#faq'
+
+  get '/spas/faq2', to: 'spas#faq2'
+
+  get '/spas/menu', to: 'spas#menu'
 end

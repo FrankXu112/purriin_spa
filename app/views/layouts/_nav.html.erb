@@ -61,21 +61,20 @@
 <div id="wrapper">
   <div class="overlay"></div>
   
-  <!-- Sidebar -->
   <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
     <ul class="nav sidebar-nav">
-      <li class="sidebar-brand"> <%= link_to 'Purriin Spa', spas_path %> </li>
+      <li class="menu-logo">  </li>
       <li> <a href="/spas"><i class="fa fa-fw fa-home"></i> Home</a> </li>
-      <li> <a href="/spas/faq"><i class="fa fa-fw fa-folder"></i> FAQs</a> </li>
-      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Spa Menu <span class="caret"></span></a>
+      <li> <a href="/spas/menu"><i class="fa fa-fw fa-info-circle"></i> Menu</a> </li>
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-question-circle"></i> FAQs <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu">
-          <li id="drop-text1"><%= link_to 'Colon Hydrotherapy', spas_path %></li>
-          <li id="drop-text2"><%= link_to 'Floatation', spas_path %></li>
+          <li id="drop-text1"><%= link_to 'Colon Hydrotherapy', '/spas/faq' %></li>
+          <li id="drop-text2"><%= link_to 'Floatation', '/spas/faq2' %></li>
         </ul>
       </li>
     </ul>
   </nav>
-  <!-- /#sidebar-wrapper -->
+ 
   <div id="page-content-wrapper">
     <button type="button" class="hamburger is-closed animated fadeInLeft" data-toggle="offcanvas">
       <span class="hamb-top"></span>
