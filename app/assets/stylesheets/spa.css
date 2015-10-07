@@ -7,6 +7,17 @@ body {
   background-color: purple;
 }
 
+@font-face {  
+  font-family: 'Bondonistd';  
+  src: url('/assets/para/a_sensible_armadillo-webfont.eot');  
+  src: url('/assets/para/a_sensible_armadillo-webfont.eot?#iefix') format('embedded-opentype'),  
+    url('/assets/para/a_sensible_armadillo-webfont.woff') format('woff'),  
+    url('/assets/para/a_sensible_armadillo-webfont.ttf') format('truetype'),  
+    url('/assets/para/a_sensible_armadillo-webfont.svg#Bondonistd') format('svg');  
+  font-weight: normal;  
+  font-style: normal;  
+}  
+
 &:hover { background-color: none; text-decoration: none;}
 
 body {
@@ -112,6 +123,7 @@ body, html {
 
 .sidebar-nav li a {
   color: #BCC6CC;
+  font-family: 'Bondonistd';
   display: block;
   padding: 0px 15px 0px 30px;
   text-decoration: none;
@@ -133,7 +145,7 @@ body, html {
   position: relative;
   width: 100%;
   font-size: 18px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Bondonistd';
   color: #BCC6CC;
 }
 
@@ -388,7 +400,7 @@ body, html {
 
 
 .heading{
-	font-family: 'Sorts Mill Goudy', serif;
+	font-family: 'Bondonistd';
 	font-size: 38px;
 	color: #533f34;
 	font-style: bold;
@@ -402,7 +414,7 @@ body, html {
 }
 
 .maintext{
-	/*font-family: 'Raleway', sans-serif;*/
+/*	font-family: 'Bondonistd';*/
 	font-size: 20px;
 	text-align: left;
 	color: #BCC6CC;
@@ -426,15 +438,48 @@ body, html {
 }
 
 footer li{
-	color: #BCC6CC
+	color: #BCC6CC;
 }
 
 .list-unstyled{
 	margin-left: 50px;
 }
 
-.list-inline{
+#social-cion{
+	list-style-type: none;
+}
+
+#social-icon>li{
+	color: #BCC6CC; 
+	display: inline-block;
+	margin-left: 15px;
+	font-size: 20px;
+}
+
+ul {
+	-webkit-padding-start: 0px;
+}
+
+#social-icon1>li {
+	color: #BCC6CC; 
+	display: inline-block;
+	font-size: 20px;
+}
+
+.icon1{
+	margin-left: 10px;
+}
+
+li>a{
 	color: grey;
+}
+
+li>a :hover{
+	color: grey;
+}
+
+.fa fa-twitter{
+	color: #BCC6CC;
 }
 
 .btn-lg{
@@ -453,5 +498,7 @@ footer{
 .copyright{
 	color: #BCC6CC;
 }
+
+
 
 
