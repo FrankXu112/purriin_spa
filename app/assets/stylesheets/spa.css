@@ -50,7 +50,7 @@ body, html {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
-  background-color: #47321D;
+  background-color: transparent;
   height: 100%;
   left: 220px;
   margin-left: -220px;
@@ -61,7 +61,7 @@ body, html {
   width: 0;
   z-index: 1000;
   font-family: 'Lato', sans-serif;
-  font-size: 22px;
+  font-size: 25px;
 }
 #sidebar-wrapper::-webkit-scrollbar {
  display: none;
@@ -113,7 +113,7 @@ body, html {
 .sidebar-nav li a {
   color: #BCC6CC;
   display: block;
-  padding: 10px 15px 10px 30px;
+  padding: 0px 15px 0px 30px;
   text-decoration: none;
 }
 
@@ -137,17 +137,18 @@ body, html {
   color: #BCC6CC;
 }
 
-.dropdown-menu>li>a #drop-text1{
-	color: #BCC6CC
-}
 
-#drop-text1{
-	color: #533f34;
-}
 
-#drop-text2{
-	color: #533f34;
-}
+/*#drop-text{
+	padding: 0;
+	display: block;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+	color: #BCC6CC;
+	font-size: 22px;
+}*/
+
 
 .sidebar-nav li a:hover, .sidebar-nav li a:active, .sidebar-nav li a:focus, .sidebar-nav li.open a:hover, .sidebar-nav li.open a:active, .sidebar-nav li.open a:focus {
   background-color: transparent;
@@ -371,7 +372,7 @@ body, html {
 	position: relative;
 	border: 1px solid black;
 	width: 350px;
-	height: 250px;
+	height: 200px;
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
@@ -379,29 +380,25 @@ body, html {
 #picture{
 	position: relative;
 	border: 1px solid black;
-	width: 1050px;
+	width: 1170px;
 	height: 500px;
-	margin-left: 40px;
-	margin-bottom: 50px;
+	margin-top: 20px;
+	margin-bottom: 40px;
 }
 
-.heading2{
-	font-family: 'Sorts Mill Goudy', serif;
-	font-size: 35px;
-	color: #816b30;
-}
 
 .heading{
 	font-family: 'Sorts Mill Goudy', serif;
-	font-size: 36px;
+	font-size: 38px;
 	color: #533f34;
+	font-style: bold;
 	position: relative;
 }
 
 .sub-heading{
 	font-family: 'Sorts Mill Goudy', serif;
 	font-size: 28px;
-	color: #816b30;
+	color: #dbbc90;
 }
 
 .maintext{
@@ -409,6 +406,11 @@ body, html {
 	font-size: 20px;
 	text-align: left;
 	color: #BCC6CC;
+}
+
+.spa-time{
+	font-size: 22px;
+	color: #dbbc90;
 }
 
 .contact-label{
@@ -423,9 +425,16 @@ body, html {
 	color: #BCC6CC;
 }
 
+footer li{
+	color: #BCC6CC
+}
 
 .list-unstyled{
 	margin-left: 50px;
+}
+
+.list-inline{
+	color: grey;
 }
 
 .btn-lg{
