@@ -425,7 +425,8 @@ body, html {
 
 .spa-time{
 	font-size: 22px;
-	color: #dbbc90;
+	color: #533f34;
+  text-align: right;
 }
 
 .contact-label{
